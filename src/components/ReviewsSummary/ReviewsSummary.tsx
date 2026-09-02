@@ -1,0 +1,4 @@
+import { useLanguage } from '../../hooks/useLanguage'
+import { Container } from '../Container/Container'
+
+export function ReviewsSummary() { const { content } = useLanguage(); const r = content.reviews; return <section className="py-16"><Container><div className="grid items-center gap-8 rounded-3xl border border-black/8 bg-white p-8 shadow-xl md:grid-cols-[1fr_auto_auto] md:p-12"><div><span className="text-xs font-extrabold uppercase tracking-[.15em] text-brand-green-dark">{r.eyebrow}</span><h2 className="mt-3 text-3xl font-black tracking-tight text-brand-ink">{r.title}</h2></div><div><strong className="text-6xl font-black tracking-[-.06em] text-brand-ink">{r.score}<span className="text-brand-green">/5</span></strong><div className="mt-1 text-lg tracking-widest text-[#b96f00]">★★★★★</div><small>{r.label}</small></div><div className="space-y-2 text-sm font-bold text-slate-600"><p>✓ {r.total}</p><p>✓ {r.recommendation}</p></div></div></Container></section> }

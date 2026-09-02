@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cyan: #36c2e5;
+  --color-brand-cyan-dark: #087d9d;
+  --color-brand-green: #41972a;
+  --color-brand-green-dark: #286b17;
+  --color-brand-ink: #161616;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { margin: 0; min-width: 320px; background: #fff; color: #40494d; font-family: Inter, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  button, input, select, textarea { font: inherit; }
+  button, summary { cursor: pointer; }
+  ::selection { background: #41972a; color: #fff; }
+}
+
+@layer components {
+  .input { min-height: 3.15rem; width: 100%; border-radius: .75rem; border: 1px solid #aab5b8; background: #fbfcfc; padding: .75rem .9rem; color: #161616; outline: none; transition: .2s; }
+  .input:focus { border-color: #087d9d; box-shadow: 0 0 0 3px rgba(54,194,229,.22); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

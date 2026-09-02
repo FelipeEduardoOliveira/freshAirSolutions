@@ -1,0 +1,3 @@
+export function SectionTitle({ eyebrow, title, text, center = false, light = false }: { eyebrow: string; title: string; text?: string; center?: boolean; light?: boolean }) {
+  return <div className={`max-w-3xl ${center ? 'mx-auto text-center' : ''}`}><span className={`mb-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[.16em] ${light ? 'text-[#8be271]' : 'text-brand-green-dark'}`}><span className="h-0.5 w-7 rounded bg-brand-cyan" />{eyebrow}</span><h2 className={`text-3xl font-black leading-tight tracking-[-.04em] sm:text-4xl lg:text-5xl ${light ? 'text-white' : 'text-brand-ink'}`}>{title}</h2>{text && <p className={`mt-5 text-lg leading-relaxed ${light ? 'text-white/70' : 'text-slate-600'}`}>{text}</p>}</div>
+}

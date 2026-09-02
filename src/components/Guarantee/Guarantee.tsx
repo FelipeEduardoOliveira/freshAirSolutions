@@ -1,0 +1,4 @@
+import { useLanguage } from '../../hooks/useLanguage'
+import { Container } from '../Container/Container'
+
+export function Guarantee() { const { content } = useLanguage(); const g = content.guarantee; return <section className="py-16"><Container><div className="grid items-center gap-7 rounded-3xl border-2 border-brand-green bg-[#eff8ec] p-8 md:grid-cols-[auto_1fr] md:p-12"><span className="grid size-24 place-items-center rounded-full bg-brand-green text-4xl font-black text-white">✓</span><div><span className="text-xs font-extrabold uppercase tracking-[.15em] text-brand-green-dark">{g.eyebrow}</span><h2 className="mt-3 text-3xl font-black tracking-tight text-brand-ink sm:text-4xl">{g.title}</h2><p className="mt-4 max-w-4xl leading-relaxed text-slate-600">{g.text}</p><small className="mt-3 block text-slate-500">{g.note}</small></div></div></Container></section> }
